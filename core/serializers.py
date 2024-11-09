@@ -22,4 +22,4 @@ class SessionSerializer(serializers.ModelSerializer):
 class FeedbackSerializer(serializers.ModelSerializer):
     class Meta:
         model = Feedback
-        fields = ['id', 'session', 'rating', 'comment']
+        fields = ['id', 'session', 'rating', 'comments']
