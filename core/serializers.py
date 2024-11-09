@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import UserProfile, Skill, Session, Feedback
+from .models import UserProfile, Skill, Session, Feedback, Match
 
 class SkillSerializer(serializers.ModelSerializer):
     class Meta:
@@ -23,3 +23,8 @@ class FeedbackSerializer(serializers.ModelSerializer):
     class Meta:
         model = Feedback
         fields = ['id', 'session', 'rating', 'comments']
+
+class MatchSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Match
+        fields = '__all__'
