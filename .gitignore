@@ -1,0 +1,18 @@
+# Ignore virtual environment
+venv/
+
+# Ignore Django and Python files
+__pycache__/
+*.py[cod]
+*.sqlite3
+
+# Ignore environment variables and settings with sensitive information
+.env
+knowledgehub/settings.py
+
+# Ignore unnecessary files and folders
+*.log
+*.pot
+*.pyc
+*.swp
+*.swo
