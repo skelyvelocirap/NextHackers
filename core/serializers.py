@@ -1,6 +1,5 @@
 from rest_framework import serializers
 from .models import UserProfile, Skill, UserSkill, Match, Session, Message, Notification, VolunteerHour, Feedback
-from .models import UserProfile, Skill, Session, Feedback, Match
 
 class SkillSerializer(serializers.ModelSerializer):
     class Meta:
@@ -36,7 +35,7 @@ class SessionSerializer(serializers.ModelSerializer):
 class MessageSerializer(serializers.ModelSerializer):
     class Meta:
         model = Message
-        fields = ['id', 'session', 'sender', 'reciever', 'content', 'timestamp']
+        fields = ['id', 'session', 'sender', 'receiver', 'content', 'timestamp']
 
 class NotificationSerializer(serializers.ModelSerializer):
     class Meta:
@@ -51,9 +50,4 @@ class VolunteerHourSerializer(serializers.ModelSerializer):
 class FeedbackSerializer(serializers.ModelSerializer):
     class Meta:
         model = Feedback
-        fields = ['id', 'session', 'rating', 'comments']
-
-class MatchSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Match
-        fields = '__all__'
+        fields = ['id', 'session', 'rating', 'comment']
