@@ -2,8 +2,12 @@ from django.shortcuts import render
 
 # Create your views here.
 from rest_framework import viewsets
-from .models import UserProfile, Skill, UserSkill, Match, Session, Message, Notification, VolunteerHour, Feedback
-from .serializers import UserProfileSerializer, SkillSerializer, UserSkillSerializer, MatchSerializer, SessionSerializer, MessageSerializer, NotificationSerializer, VolunteerHourSerializer, FeedbackSerializer
+from .models import UserProfile, Skill, UserSkill, Match, Session, Message, Notification, VolunteerHour, Feedback, Match
+from .serializers import UserProfileSerializer, SkillSerializer, UserSkillSerializer, MatchSerializer, SessionSerializer, MessageSerializer, NotificationSerializer, VolunteerHourSerializer, FeedbackSerializer, MatchSerializer
+
+class MatchViewSet(viewsets.ModelViewSet):
+    queryset = Match.objects.all()
+    serializer_class = MatchSerializer
 class UserProfileViewSet(viewsets.ModelViewSet):
     queryset = UserProfile.objects.all()
     serializer_class = UserProfileSerializer
