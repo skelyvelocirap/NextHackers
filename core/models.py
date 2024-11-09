@@ -48,8 +48,8 @@ class Notification(models.Model):
 
 class VolunteerHour(models.Model):
     mentor = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
-    session = models.ForeignKey(Session, on_delete=models.CASCADE)
     hours = models.FloatField()
+    session = models.ForeignKey(Session, on_delete=models.CASCADE)
     date = models.DateField()
 
 class Feedback(models.Model):
