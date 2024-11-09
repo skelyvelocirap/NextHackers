@@ -20,12 +20,12 @@ class MatchSerializer(serializers.ModelSerializer):
         fields = ['id', 'mentor', 'learner', 'skill', 'status']
 
 class UserProfileSerializer(serializers.ModelSerializer):
-    skills_to_teach = SkillSerializer(many=True)
-    skills_to_learn = SkillSerializer(many=True)
+    #skills_to_teach = SkillSerializer(many=True)
+    #skills_to_learn = SkillSerializer(many=True)
 
     class Meta:
         model = UserProfile
-        fields = ['id', 'user', 'skills_to_teach', 'skills_to_learn', 'volunteer_hours']
+        fields = ['id', 'user', 'bio', 'profile_pic', 'volunteer_hours']
 
 class SessionSerializer(serializers.ModelSerializer):
     class Meta:
