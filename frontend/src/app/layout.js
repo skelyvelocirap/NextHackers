@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
         <div className="absolute inset-0 -z-30 h-56 w-full bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:40px_40px]"></div>
         <div className="absolute inset-0 -z-20 h-56 w-full bg-gradient-to-t from-white to-transparent to-50%"></div>
         <Navbar />
-        {children}
+        <main className="pt-28">{children}</main>
         <Footer />
       </body>
     </html>
